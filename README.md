@@ -1,6 +1,6 @@
-# Laboratorio 3D Interactivo con Realidad Aumentada
+# Laboratorio AR Educativo
 
-Este proyecto es una aplicación web diseñada para ofrecer experiencias educativas interactivas a través de la realidad aumentada (AR). La aplicación permite a los usuarios visualizar modelos 3D en su propio entorno utilizando la cámara de un dispositivo móvil.
+Este proyecto es una aplicación web diseñada para ofrecer experiencias educativas interactivas sobre conceptos de física y química a través de la realidad aumentada (AR). La aplicación utiliza la cámara de un dispositivo (preferiblemente un celular) para superponer modelos 3D en el mundo real.
 
 ## ✨ Características
 
@@ -14,6 +14,7 @@ Este proyecto es una aplicación web diseñada para ofrecer experiencias educati
 - **`<model-viewer>` (de Google):** El componente principal para la experiencia de Realidad Aumentada. Permite visualizar modelos 3D (`.glb`) en el mundo real a través de ARCore (Android) y ARKit (iOS).
 - **HTML5 / CSS3 / JavaScript ES6:** La base de la aplicación web.
 - **[Vite](https://vitejs.dev/):** Herramienta de desarrollo para un servidor local rápido y empaquetado eficiente.
+- **[vite-plugin-mkcert](https://github.com/liuweiGL/vite-plugin-mkcert):** Genera certificados SSL locales para habilitar un entorno de desarrollo seguro (HTTPS), necesario para probar funciones de AR.
 
 ## ✅ Requerimientos
 
@@ -32,7 +33,7 @@ Este proyecto es una aplicación web diseñada para ofrecer experiencias educati
     ```bash
     npm run dev
     ```
-    Vite iniciará el servidor y te proporcionará una URL local (generalmente `https://localhost:5173`) pero para abrirlo en celular tienes que abrirlo con la opcion de Network (es decir, la IP + 5173.) Normalmente se debera configurar el firewall para que deje entrar otros dispositivos a la conexion de la IP.
+    Vite iniciará un servidor de desarrollo seguro (HTTPS) y lo hará accesible en tu red local. Podrás acceder a él desde tu celular usando la dirección IP de tu computadora (ej. `https://192.168.1.10:5173`).
 
 ## 📱 Cómo Usar
 
@@ -50,6 +51,7 @@ Este proyecto es una aplicación web diseñada para ofrecer experiencias educati
 ├── README.md                 # Este archivo
 ├── assets/
 │   ├── css/                  # Estilos CSS
+│   ├── Js/                   # Scripts de JavaScript
 │   └── models/               # Contiene los modelos 3D en formato .glb
 └── experiments/
     └── ...                   # Archivos HTML para cada escena AR individual
