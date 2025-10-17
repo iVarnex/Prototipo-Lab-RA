@@ -1,8 +1,7 @@
 {
-  "name": "test-proyect",
+  "name": "laboratorio-ar-educativo",
   "version": "1.0.0",
   "description": "Este proyecto es una aplicación web diseñada para ofrecer experiencias educativas interactivas sobre conceptos de física y química a través de la realidad aumentada (AR). La aplicación utiliza la cámara de un dispositivo (preferiblemente un celular) para superponer modelos 3D en el mundo real.",
-  "main": "index.js",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
