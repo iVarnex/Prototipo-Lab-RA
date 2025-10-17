@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo: Modelo Local</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <style>
+        body { background-color: #212529; color: white; }
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #343a40;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1 class="display-5 mb-3">Cargando un Modelo Local</h1>
+        <p class="lead mb-4">
+            Este es un ejemplo que carga un archivo <code>.glb</code> desde la carpeta <code>/assets/models/</code> de tu proyecto.
+        </p>
+        <model-viewer 
+            src="/assets/models/atomo.glb"
+            alt="Un modelo 3D de un átomo (reemplazar con tu modelo)"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1">
+        </model-viewer>
+
+        <div class="mt-4">
+            <a href="/index.html" class="btn btn-primary">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>

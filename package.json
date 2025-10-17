@@ -1,0 +1,21 @@
+{
+  "name": "test-proyect",
+  "version": "1.0.0",
+  "description": "Este proyecto es una aplicación web diseñada para ofrecer experiencias educativas interactivas sobre conceptos de física y química a través de la realidad aumentada (AR). La aplicación utiliza la cámara de un dispositivo (preferiblemente un celular) para superponer modelos 3D en el mundo real.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
+    "vite": "^7.1.9",
+    "vite-plugin-mkcert": "^1.17.8"
+  },
+  "dependencies": {}
+}

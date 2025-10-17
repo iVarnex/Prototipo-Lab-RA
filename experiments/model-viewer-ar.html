@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimento: Model-Viewer AR</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <style>
+        body { background-color: #212529; color: white; }
+        model-viewer {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #343a40;
+            border-radius: 10px;
+        }
+        .container {
+            max-width: 800px;
+        }
+    </style>
+    <!-- Importa el componente <model-viewer> -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1 class="display-5 mb-3">Realidad Aumentada (Sin Marcador)</h1>
+        <p class="lead mb-4">
+            Este es un modelo 3D interactivo. En un dispositivo móvil compatible, verás un botón en la parte inferior derecha para verlo en tu propio espacio usando Realidad Aumentada.
+        </p>
+
+        <!-- Etiqueta de model-viewer -->
+        <model-viewer 
+            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            alt="Un modelo 3D de un astronauta"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            auto-rotate
+            shadow-intensity="1">
+        </model-viewer>
+
+        <div class="mt-4">
+            <a href="/index.html" class="btn btn-primary">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>
