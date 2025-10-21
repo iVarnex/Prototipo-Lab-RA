@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratorio AR (Marcadores)</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <style>
-        body { background-color: #212529; color: white; }
-        .card { background-color: #343a40; border: 1px solid #495057; }
-        .card-title { color: #ffc107; }
-        .btn-primary { background-color: #ffc107; border-color: #ffc107; color: #212529; font-weight: bold; }
-        .btn-primary:hover { background-color: #e0a800; border-color: #d39e00; }
-    </style>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+    <button id="theme-toggle" class="btn btn-outline-light">🌙</button>
     <div class="container mt-5">
         <div class="text-center mb-4">
             <h1 class="display-4">Laboratorio 3D Interactivo (AR con Marcadores)</h1>
@@ -25,7 +19,7 @@
                 <div class="card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">AR sin Marcadores (Experimental)</h5>
-                        <a href="/experiments/model-viewer-ar.html" class="btn btn-primary">Iniciar</a>
+                        <a href="/experiments/model-viewer-ar.html" class="btn-custom">Iniciar</a>
                     </div>
                 </div>
             </div>
@@ -33,12 +27,13 @@
                 <div class="card h-100">
                     <div class="card-body text-center">
                         <h5 class="card-title">Ejemplo (Modelo Local)</h5>
-                        <a href="/experiments/ejemplo-modelo-local.html" class="btn btn-primary">Iniciar</a>
+                        <a href="/experiments/ejemplo-modelo-local.html" class="btn-custom">Iniciar</a>
                     </div>
                 </div>
             </div>
             <!-- Placeholder for other experiments -->
         </div>
     </div>
+    <script src="/assets/Js/main.js"></script>
 </body>
 </html>
