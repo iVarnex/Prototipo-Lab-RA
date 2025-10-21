@@ -21,29 +21,46 @@ Este proyecto es un prototipo de laboratorio educativo en Realidad Aumentada (RA
 
 ## Requisitos
 -   Node.js (versión 14 o superior recomendada)
--   npm o Yarn
+-   npm
 
 ## Instalación
-1.  Clona este repositorio (si aplica) o descarga los archivos del proyecto.
+1.  Clona este repositorio.
 2.  Navega hasta el directorio raíz del proyecto en tu terminal.
 3.  Instala las dependencias:
     ```bash
     npm install
-    # o
-    yarn install
     ```
 
 ## Ejecución del Proyecto
 Para iniciar el servidor de desarrollo:
 ```bash
 npm run dev
-# o
-yarn dev
 ```
-Esto iniciará un servidor local (generalmente en `http://localhost:5173`). Abre esta URL en tu navegador para ver el prototipo.
+Esto iniciará un servidor local. Vite te proporcionará varias URLs en la terminal. Para probar la funcionalidad de Realidad Aumentada, **debes usar la dirección de red (Network) que empieza por `https://`**.
+
+## 📱 Pruebas en Dispositivos Móviles
+
+Para que tu teléfono móvil pueda acceder al servidor de desarrollo de tu PC, ambos deben estar en la misma red Wi-Fi y debes configurar el firewall de tu PC para permitir la conexión.
+
+1.  **Busca tu IP local**:
+    -   En Windows, abre una terminal (Símbolo del sistema o PowerShell) y ejecuta el comando `ipconfig`.
+    -   Busca la dirección que dice "Dirección IPv4". Generalmente es algo como `192.168.1.X`.
+
+2.  **Abre el puerto en el Firewall de Windows**:
+    -   Abre "Firewall de Windows Defender con seguridad avanzada".
+    -   Haz clic en "Reglas de entrada" en el panel izquierdo.
+    -   En el panel derecho, haz clic en "Nueva regla...".
+    -   Selecciona `Puerto` y haz clic en "Siguiente".
+    -   Selecciona `TCP` y en "Puertos locales específicos", escribe el puerto que usa Vite (normalmente es `5173`).
+    -   Selecciona "Permitir la conexión" y avanza.
+    -   Asegúrate de que la regla se aplique al perfil de red "Privada".
+    -   Dale un nombre a la regla (ej. "Vite Dev Server") y finaliza.
+
+3.  **Accede desde tu móvil**:
+    -   Abre el navegador en tu teléfono y escribe la dirección de red que te dio Vite al iniciar el servidor. Será algo como: `https://192.168.1.X:5173`.
 
 ## Modelos 3D
 Los modelos 3D se encuentran en la carpeta `assets/models/` y deben estar en formato GLB para ser utilizados eficientemente con `<model-viewer>`.
 
 ## Experimentos
-La carpeta `experiments/` contiene archivos HTML de ejemplo que demuestran diferentes configuraciones y usos de `<model-viewer>`, como la carga de modelos locales (`ejemplo-modelo-local.html`) y la activación de la experiencia de Realidad Aumentada (`model-viewer-ar.html`).
+La carpeta `experiments/` contiene archivos HTML de ejemplo que demuestran diferentes configuraciones y usos de `<model-viewer>`.
