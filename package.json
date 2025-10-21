@@ -16,5 +16,7 @@
     "vite": "^7.1.9",
     "vite-plugin-mkcert": "^1.17.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
 }
